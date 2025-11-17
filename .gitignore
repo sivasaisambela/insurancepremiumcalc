@@ -5,3 +5,5 @@
 /.vs
 /InsurancePremiumCalculator/obj
 /InsurancePremiumCalculator/bin/Debug/net8.0
+/PremiumCalculator.Tests/bin/Debug/net8.0
+/PremiumCalculator.Tests/obj

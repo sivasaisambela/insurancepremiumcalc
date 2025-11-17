@@ -21,10 +21,17 @@ namespace InsurancePremiumCalculator.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+            try
+            {
+                var result = _service.Calculate(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            { 
+              return BadRequest(new { message = ex.Message });
+            }
 
-            var result = _service.Calculate(request);
-
-            return Ok(result);
+            
         }
     }
 }
